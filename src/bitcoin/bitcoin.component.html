@@ -1,16 +1,19 @@
-<div *ngIf="getPrice();">
+<div *ngIf="getPrice()">
   <h2>Data/Hora</h2>
-    <div>{{this.getPrice().time.updated}}</div>
-    <hr>
+    <div class="mb-5">{{this.getPrice().time.updated}}</div>
 
-    <h2>Descrição</h2>
-    <div>{{this.getPrice().disclaimer}}</div>
-    <hr>
-
-    <h2>Valor em Real</h2>
-    <div>{{this.getPrice().bpi.BRL.rate}}</div>
-    <hr>
-
-    <h2>Valor em Dolar</h2>
-    <div>{{this.getPrice().bpi.USD.rate}}</div>
+    <table class="table table-striped text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th>Valor em Real</th>
+          <th>Valor em Dolar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>R$ {{this.getPrice().bpi.BRL.rate}}</td>
+          <td> $ {{this.getPrice().bpi.USD.rate}}</td>
+        </tr>
+      </tbody>
+    </table>
 </div>
