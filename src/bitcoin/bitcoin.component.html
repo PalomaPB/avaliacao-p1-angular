@@ -1,4 +1,16 @@
 <div *ngIf="getPrice()">
   <h2>Data/Hora</h2>
-  
+    <div>{{this.getPrice().time.updated}}</div>
+    <hr>
+
+    <h2>Descrição</h2>
+    <div>{{this.getPrice().disclaimer}}</div>
+    <hr>
+
+    <h2>Valor em Real</h2>
+    <div>{{this.getPrice().bpi.BRL.rate}}</div>
+    <hr>
+
+    <h2>Valor em Dolar</h2>
+    <div>{{this.getPrice().bpi.USD.rate}}</div>
 </div>
