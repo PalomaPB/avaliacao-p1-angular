@@ -4,9 +4,18 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
+import { RouterModule } from '@angular/router';
+import { BitcoinComponent } from '../bitcoin/bitcoin.component';
+import { MinhacarteiraComponent } from '../minhacarteira/minhacarteira.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ 
+    BrowserModule, 
+    FormsModule, 
+    RouterModule.forRoot([
+      {path:'bitcoin', component: BitcoinComponent},
+      {path:'carteira', component: MinhacarteiraComponent}
+    ]) ],
   declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ]
 })
